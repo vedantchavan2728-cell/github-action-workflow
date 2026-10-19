@@ -1,0 +1,25 @@
+```yaml
+name: My First GitHub Action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Welcome Message
+        run: echo "Hello Bhai! GitHub Actions is working successfully."
+
+      - name: Show Current Date
+        run: date
+
+      - name: List Repository Files
+        run: ls -la
+```
